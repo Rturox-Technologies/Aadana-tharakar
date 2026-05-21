@@ -18,7 +18,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@lombok.Builder
 public class Property {
 
     @Id
@@ -63,19 +63,19 @@ public class Property {
     private Double longitude;
 
     @Column(name = "is_verified")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean isVerified = false;
 
     @Column(name = "is_featured")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean isFeatured = false;
 
     @Column(name = "dtcp_approved")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean dtcpApproved = false;
 
     @Column(name = "cmda_approved")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean cmdaApproved = false;
 
     @Column(name = "rera_number", length = 100)
@@ -85,19 +85,19 @@ public class Property {
     private String pattaNumber;
 
     @Column(name = "water_availability")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean waterAvailability = false;
 
     @Column(name = "eb_connection")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean ebConnection = false;
 
     @Column(name = "flood_safe")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean floodSafe = false;
 
     @Column(name = "vaastu_compliant")
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean vaastuCompliant = false;
 
     @Column(name = "road_width_feet")
@@ -116,13 +116,13 @@ public class Property {
     private User user;
 
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
+    @lombok.Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<PropertyImage> images = new ArrayList<>();
 
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
+    @lombok.Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<PropertyVideo> videos = new ArrayList<>();

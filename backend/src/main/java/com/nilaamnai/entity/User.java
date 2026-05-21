@@ -3,6 +3,7 @@ package com.nilaamnai.entity;
 import com.nilaamnai.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.Builder;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 

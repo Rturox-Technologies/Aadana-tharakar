@@ -19,7 +19,7 @@ public class ApiResponse<T> {
     @Builder.Default
     private LocalDateTime timestamp = LocalDateTime.now();
 
-    public static <T> ApiResponse<T> success(T data, String message) {
+    public static <T> ApiResponse<T> success(String message, T data) {
         return ApiResponse.<T>builder()
                 .success(true)
                 .message(message)
@@ -27,8 +27,12 @@ public class ApiResponse<T> {
                 .build();
     }
 
+    public static <T> ApiResponse<T> success(String message) {
+        return success(message, null);
+    }
+
     public static <T> ApiResponse<T> success(T data) {
-        return success(data, "Operation completed successfully");
+        return success("Operation completed successfully", data);
     }
 
     public static <T> ApiResponse<T> error(String message) {

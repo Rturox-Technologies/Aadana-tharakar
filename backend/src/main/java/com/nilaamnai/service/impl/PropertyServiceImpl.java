@@ -2,7 +2,9 @@ package com.nilaamnai.service.impl;
 
 import com.nilaamnai.dto.request.PropertyCreateRequest;
 import com.nilaamnai.dto.request.PropertyUpdateRequest;
+import com.nilaamnai.dto.response.PropertyDetailResponse;
 import com.nilaamnai.dto.response.PropertyImageResponse;
+import com.nilaamnai.dto.response.PropertySummaryResponse;
 import com.nilaamnai.dto.response.PropertyVideoResponse;
 import com.nilaamnai.dto.response.UserDto;
 import com.nilaamnai.entity.*;
@@ -29,6 +31,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Collectors;
 

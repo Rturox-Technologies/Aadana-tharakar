@@ -12,7 +12,7 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@lombok.Builder
 public class Builder {
 
     @Id
@@ -31,14 +31,14 @@ public class Builder {
     @Column(name = "rera_id")
     private String reraId;
 
-    @Builder.Default
+    @lombok.Builder.Default
     private Boolean verified = false;
 
     @Column(name = "established_year")
     private Integer establishedYear;
 
     @Column(name = "total_projects")
-    @Builder.Default
+    @lombok.Builder.Default
     private Integer totalProjects = 0;
 
     @CreationTimestamp
