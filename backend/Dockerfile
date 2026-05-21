@@ -22,6 +22,7 @@ LABEL maintainer="Aadana Tharakar <support@aadanatharakar.com>"
 LABEL description="Aadana Tharakar (ஆதனத் தரகர்) — Tamil Nadu Real Estate Platform Backend"
 
 # Security: run as non-root user
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 RUN groupadd --system nilaamnai && useradd --system --gid nilaamnai nilaamnai
 
 WORKDIR /app
